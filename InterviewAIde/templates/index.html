@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InterviewAIde - Interview Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>InterviewAIde</h2>
+            <ul>
+                <li class="active" data-mode="chat">Chat Mode</li>
+                <li data-mode="cv">CV-based Interview</li>
+                <li data-mode="practice">Verbal Mode</li>
+                <li data-mode="about">About</li>
+                <li data-mode="contact">Contact</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="chat-window" id="chat-window"></div>
+            <div class="input-bar">
+                <input type="text" id="user-input" placeholder="Type your message here...">
+                <button id="send-button">Send</button>
+                <button id="start-speaking" style="display: none;">Start Speaking</button>
+                <button id="stop-speaking" style="display: none;">Stop Speaking</button>
+                <div id="listening-animation" style="display: none;">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <!-- CV-mode specific section -->
+            <div id="cv-mode-section" style="display: none;">
+                <button id="cv-upload-button" class="tooltip">
+                    <i class="fas fa-paperclip"></i>
+                    <span class="tooltiptext">Upload CV</span>
+                </button>
+                <input type="file" id="cv-file" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+/* font-family: "Playwrite IT Moderna", cursive; */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #001E1E;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-family: "Playwrite IT Moderna", cursive;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:hover {
+    background-color: #00312F;
+}
+
+.sidebar ul li.active {
+    background-color: #008b86;
+    color: white;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #00312F;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    line-height: 1.4;
+    position: relative;
+    color: #fff;
+}
+
+.user-message {
+    background-color: #008b86;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.ai-message {
+    background-color: #e5e5ea;
+    color: #000;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.input-bar {
+    display: flex;
+    padding: 20px;
+    background-color: #00312F;
+}
+
+.input-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-bar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #001E1E;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.input-bar button:hover {
+    background-color: #008b86;
+}
+
+#start-speaking, #stop-speaking {
+    background-color: #008b86;
+}
+
+#start-speaking:hover, #stop-speaking:hover {
+    background-color: #00635e;
+}
+
+#listening-animation {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #008b86;
+    margin: 0 3px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+/* NEW CHANGES */
+
+#cv-mode-section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+#cv-upload-button {
+    padding: 10px;
+    font-size: 20px;
+    background-color: #001E1E;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 1065px; */
+    left: 1065px;
+}
+
+#cv-upload-button:hover {
+    background-color: #008b86;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
