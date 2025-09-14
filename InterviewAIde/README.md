@@ -1,16 +1,91 @@
-# HOW TO SETUP THE ENV
+# InterviewAIde - AI Interview Assistant
 
-1. Clone the directory
-2. Open the folder in VSCode
-3. In the terminal/the cmd prompt of the folders directory, create a virtual env like this:
-   python -m venv .venv
-4. To enter/activate the environment, type this:
-   .venv/Scripts/activate
-5. Now type this: pip install groq gradio requests flask
-6. Get your own API key of GROQ
-7. In the terminal type this: 
-   $env:GROQ_API_KEY = "your api key here"
-8. First run the file api.py by typing this in terminal: python api.py
-9. Then open another terminal on vscode (split screen)
-10. Repeat steps 4 and 7 if you are not in virtual environment.
-11. Then run file app.py: python app.py
+## Overview
+
+**InterviewAIde** is a web-based AI-powered interview assistant that generates interview questions, analyzes CVs, and provides personalized feedback. Built with **Node.js** and **Express**, this tool helps candidates practice interviews, prepare for real-world scenarios, and improve performance.
+
+Key features include:  
+- **Domain-specific interview questions** generated based on the candidate’s profile or CV.  
+- **CV upload and analysis** to extract skills, experience, and education.  
+- **Feedback generation** for answers to help candidates improve.
+
+<p align="center">
+<img src="homepage.png" width="900">
+</p>
+
+---
+
+## Features
+
+- **Interview Question Generation**:  
+  Generate interview questions tailored to the selected job domain or candidate’s background.
+
+- **CV Upload & Analysis**:  
+  Upload and analyze CVs to generate personalized interview questions.
+
+- **Live Interview Mode**:  
+  Practice text-based or oral interviews with AI-generated questions.
+
+- **Feedback Generation**:  
+  Receive detailed feedback after interviews highlighting strengths, weaknesses, and actionable suggestions.
+
+---
+
+## Requirements
+
+### Software Requirements:
+- **Node.js** (Latest LTS version)  
+- **Express.js** (Web framework)  
+- **EJS** (Template engine)  
+- **CSS/HTML** (Frontend UI)  
+- **Optional**: Open-source LLM or AI API for generating interview questions
+
+---
+
+## Setup Instructions
+
+### Step-by-Step Setup
+
+1. **Clone the Repository**
+```bash
+git clone <REPO_URL>
+cd InterviewAIde
+```
+
+2. **Create a Virtual Environment:**
+    ```bash
+    python -m venv .venv
+    ```
+
+3. **Activate the Virtual Environment:**
+    - **Windows:**
+      ```bash
+      .venv\Scripts\activate
+      ```
+    - **Linux/Mac:**
+      ```bash
+      source .venv/bin/activate
+      ```
+
+4. **Install Dependencies:**
+    ```bash
+    pip install groq flask requests
+    ```
+
+5. **Set Your **GROQ_API_KEY**:**
+    - **Windows:**
+      ```bash
+      $env:GROQ_API_KEY = "your-api-key-here"
+      ```
+    - **Linux/Mac:**
+      ```bash
+      export GROQ_API_KEY="your-api-key-here"
+      ```
+
+6. **Run the Flask API Server:**
+    In the terminal, run:
+    ```bash
+    python api.py
+    ```
+
+    This will start the Flask server, which handles the backend API calls and routes.
